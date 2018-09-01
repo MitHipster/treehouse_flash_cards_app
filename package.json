@@ -1,0 +1,26 @@
+{
+	"name": "treehouse_flash_cards_app",
+	"version": "1.0.0",
+	"description": "Treehouse Flash Cards App using Express",
+	"main": "app.js",
+	"scripts": {
+		"devserver": "./node_modules/nodemon/bin/nodemon.js app.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MitHipster/treehouse_flash_cards_app.git"
+	},
+	"author": "Tim Acker",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/MitHipster/treehouse_flash_cards_app/issues"
+	},
+	"homepage": "https://github.com/MitHipster/treehouse_flash_cards_app#readme",
+	"dependencies": {
+		"express": "^4.16.3"
+	},
+	"devDependencies": {
+		"nodemon": "^1.18.4"
+	}
+}
