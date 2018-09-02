@@ -11,40 +11,12 @@ app.use(cookieParser());
 app.engine('hbs', exphbs({ defaultLayout: 'main', extname: 'hbs' }));
 app.set('view engine', 'hbs');
 
-app.get('/', (req, res) => {
-	const name = req.cookies.username;
-	if (name) {
-		res.render('index', { name });
-	} else {
-		res.redirect('/hello');
-	}
-});
+// The index.js file is not specified as that is the default name express expects
+const mainRoutes = require('./routes');
+const cardRoutes = require('./routes/cards');
 
-app.get('/hello', (req, res) => {
-	const name = req.cookies.username;
-	if (!name) {
-		res.render('hello');
-	} else {
-		res.redirect('/');
-	}
-});
-
-app.post('/hello', (req, res) => {
-	res.cookie('username', req.body.username);
-	res.redirect('/');
-});
-
-app.post('/goodbye', (req, res) => {
-	res.clearCookie('username');
-	res.redirect('/hello');
-});
-
-app.get('/cards', (req, res) => {
-	res.render('index', {
-		prompt: "Who is buried in Grant's tomb?",
-		hint: 'Think about whose tomb it is.'
-	});
-});
+app.use(mainRoutes);
+app.use('/cards', cardRoutes);
 
 app.use((req, res, next) => {
 	const err = new Error('Not Found');
