@@ -1,4 +1,8 @@
 <section id="content">
 	<h2>{{prompt}}</h2>
-	<p><i>Hint: {{hint}}</i></p>
+	{{#if hint}}
+		<p><i>Hint: {{hint}}</i></p>
+	{{else}}
+		<p>Sorry, no hint available.</p>
+	{{/if}}
 </section>
