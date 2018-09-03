@@ -24,6 +24,15 @@ router.post('/hello', (req, res) => {
 	res.redirect('/');
 });
 
+router.get('/goodbye', (req, res) => {
+	const name = req.cookies.username;
+	if (!name) {
+		res.redirect('hello');
+	} else {
+		res.redirect('/');
+	}
+});
+
 router.post('/goodbye', (req, res) => {
 	res.clearCookie('username');
 	res.redirect('/hello');
