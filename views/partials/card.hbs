@@ -1,8 +1,7 @@
 <section id="content">
-	<h2>{{prompt}}</h2>
+	<h2>{{text}}</h2>
 	{{#if hint}}
 		<p><i>Hint: {{hint}}</i></p>
-	{{else}}
-		<p>Sorry, no hint available.</p>
 	{{/if}}
+	<a href={{id}}?side={{displaySide}}>{{displaySideText}}</a>
 </section>
