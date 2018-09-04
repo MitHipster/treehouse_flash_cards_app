@@ -1,9 +1,20 @@
-<section id="content">
-	<h2>{{text}}</h2>
-	{{#if hint}}
-		<p><i>Hint: {{hint}}</i></p>
-	{{/if}}
-	<a href={{id}}?side={{displaySide}}>{{displaySideText}}</a>
-	<br>
-	<a href="/cards">Next Card</a>
+<section class="flashcards">
+	<div class="card card-{{displaySide}}">
+		<div class="card-header">
+		</div>
+		<h1 class="card-title">{{displaySide}}</h1>
+		<div id="content">
+			<h2>{{text}}</h2>
+			{{#if hint}}
+				<p class="hint"><i>Hint: {{hint}}</i></p>
+			{{/if}}
+		</div>
+		<div class="card-flip-wrap">
+			<a href="{{id}}?side={{flipSide}}"><img src="/static/img/flip.svg" class="card-flip"></a>
+		</div>
+		<div class="card-next">
+			<a href="/cards"><img src="/static/img/next.svg"></a>
+		</div>
+	</div>
+	<script src="/static/js/app.js"></script>
 </section>

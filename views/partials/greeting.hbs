@@ -1,0 +1,19 @@
+<section class="namecard">
+	<div class="namecard-hello">
+		{{#if name}}
+			<p class="namecard-greeting">Welcome, {{name}}</p>
+			{{> signout}}
+		{{else}}
+			<p class="namecard-greeting">Hello, student!</p>
+		{{/if}}
+	</div>
+	{{#if name}}
+		{{!-- Display elements below unless it's a cards route --}}
+		{{#unless id}}
+			<h1 class="namecard-prompt">Let's get started.</h1>
+			<a class="namecard-submit" href="/cards">Begin!</a>
+		{{/unless}}
+	{{else}}
+		{{> signin}}
+	{{/if}}
+</section>

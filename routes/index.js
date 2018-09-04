@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
 router.get('/hello', (req, res) => {
 	const name = req.cookies.username;
 	if (!name) {
-		res.render('hello');
+		res.render('index');
 	} else {
 		res.redirect('/');
 	}
@@ -27,7 +27,7 @@ router.post('/hello', (req, res) => {
 router.get('/goodbye', (req, res) => {
 	const name = req.cookies.username;
 	if (!name) {
-		res.redirect('hello');
+		res.redirect('index');
 	} else {
 		res.redirect('/');
 	}

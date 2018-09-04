@@ -2,9 +2,9 @@
 	"name": "treehouse_flash_cards_app",
 	"version": "1.0.0",
 	"description": "Treehouse Flash Cards App using Express",
-	"main": "app.js",
+	"main": "server.js",
 	"scripts": {
-		"devserver": "./node_modules/nodemon/bin/nodemon.js app.js",
+		"devserver": "./node_modules/nodemon/bin/nodemon.js server.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
