@@ -16,7 +16,7 @@ After downloading or cloning this repo, run `npm install` to download dependenci
 
 ## Deployed
 
-Deployed on [Heroku](#)
+Deployed on [Heroku](https://tranquil-stream-70651.herokuapp.com/)
 
 ## Built With
 
